@@ -1,5 +1,9 @@
 # React Simple Todo App
+This is the repository for my react study
 
+## App Preview
+
+![alt text](app-preview.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
