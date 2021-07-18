@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react';
+import AddTodo from './Todos/AddTodo';
+import TodoItemsList from './Todos/TodoItemsList';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [todoItems, setTodoItems] = useState([]);
+
+    const addTodoItemHandler = (todoItem) => {
+        setTodoItems(prevTodoItems => {
+            return [...prevTodoItems, { id: Math.random(), todoItem }];
+        })
+    }
+
+    const deleteTodoItemHandler = id => {
+        setTodoItems(prevTodoItems => {
+            return prevTodoItems.filter((todoItem) => todoItem.id !== id);
+        })
+    }
+
+    const editTodoItemHandler = (id, updatedTodoItem) => {
+        setTodoItems(prevTodoItems => {
+            const idx = prevTodoItems.findIndex((todoItem) => todoItem.id === id);
+            prevTodoItems[idx] = { id: Math.random(), todoItem: updatedTodoItem };
+            console.log(prevTodoItems);
+            return prevTodoItems;
+        })
+    }
+    return <>
+        <AddTodo onAddTodoItem={addTodoItemHandler} />
+        <TodoItemsList todoItems={todoItems} onDeleteTodoItem={deleteTodoItemHandler} onEditTodoItem={editTodoItemHandler} />
+    </>
+
+
+
 }
 
 export default App;

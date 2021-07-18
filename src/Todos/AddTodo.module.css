@@ -1,0 +1,32 @@
+.input {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 35rem;
+}
+
+.input form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input label {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    color: #222020d8;
+}
+
+.input input {
+    font: inherit;
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 0.3rem;
+    margin: 0 1rem;
+}
+
+.input input:focus {
+    outline: none;
+    border-color: #1D4E56;
+}

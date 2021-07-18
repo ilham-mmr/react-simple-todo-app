@@ -1,0 +1,23 @@
+.todo-items {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 35rem;
+}
+
+.todo-items ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.todo-items li {
+    border: 2px solid white;
+    border-radius: 16px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.todo-items p {
+    font-weight: bold;
+    text-align: center;
+    color: #222020d8;
+}
