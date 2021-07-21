@@ -1,5 +1,5 @@
 # React Simple Todo App
-This is the repository for my react study
+This is the repository for my react study. This app implements useState and useEffect hooks.
 
 ## App Preview
 
